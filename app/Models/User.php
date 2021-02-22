@@ -12,6 +12,13 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     /**
+     * GETTER des posts du user.
+     */
+    public function posts() {
+        return $this->hasMany('App\Models\Post');
+    }
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array

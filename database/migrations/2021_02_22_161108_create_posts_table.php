@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('title', 255);
             $table->text('content');
             $table->string('image', 45);
+            $table->string('file', 45);
             $table->foreignId('user_id')->constrained();
         });
     }
