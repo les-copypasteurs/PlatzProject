@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
     <body>
+        <h1>ca marche</h1>
         <div id="app">
         <router-view></router-view>
         </div>
