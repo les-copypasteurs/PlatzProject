@@ -5,13 +5,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Laravel</title>
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
     </head>
     <body>
         <h1>ca marche</h1>
+        <img src="{{ asset('assets') }}/img/avatar.jpg" alt="">
+
         <div id="app">
         <router-view></router-view>
         </div>
-        <script src="{{ asset('js/app.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+
     </body>
 </html>
