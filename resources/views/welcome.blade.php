@@ -1,20 +1,20 @@
 <!-- ./resources/views/welcome.blade.php -->
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Laravel</title>
-        <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
-    </head>
-    <body>
-        <h1>ca marche</h1>
-        <img src="{{ asset('assets') }}/img/avatar.jpg" alt="">
 
-        <div id="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laravel</title>
+    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+</head>
+
+<body>
+    <div id="app">
         <router-view></router-view>
-        </div>
-        <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+    </div>
+    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
 
-    </body>
+</body>
+
 </html>
