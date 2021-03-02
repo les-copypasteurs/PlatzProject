@@ -23,8 +23,8 @@ class PostFactory extends Factory
     {
         return [
             'title' => $this->faker->words(3,true),
-            'content' => $this->faker->paragraph(100),
-            'image' => $this->faker->numberBetween($min = 1, $max = 4) . ".jpg",
+            'content' => $this->faker->paragraph(10),
+            'image' => " (" . $this->faker->numberBetween($min = 1, $max = 25) . ").jpg",
             'file' => $this->faker->numberBetween($min = 1, $max = 4) . ".jpg",
             'created_at' => $this->faker->dateTimeBetween('-20 days', now()),
             'user_id' => $this->faker->numberBetween($min = 1, $max = 10),

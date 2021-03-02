@@ -11,20 +11,20 @@
 						<div v-for="info in data" v-bind:key="info.id">
 						<figure class="white">
 							<a href="details.html">
-								<img src="img/psd-4.jpg" alt="" />
-								<dl>
-									<dt>{{info.titre}}</dt>
-									<dd>{{info.texte}}</dd>
+								<img v-bind:src="'assets/img/' + info.image" alt="" />
+								<dl  style="overflow: hidden;">
+									<dt>{{info.title}}</dt>
+									<dd>{{info.content}}</dd>
 								</dl>
 							</a>
                           <div id="wrapper-part-info">
-                            <div class="part-info-image"><img src="img/icon-psd.svg" alt="" width="28" height="28"/></div>
-                            <div id="part-info">Wordpress nnnnn</div>
+                            <div class="part-info-image"><img src="assets/img/icon-psd.svg" alt="" width="28" height="28"/></div>
+                            <div id="part-info">{{info.title}}</div>
 						</div>
                       </figure>
 </div>
 
-            
+
 					</section>
 
 				</div>
@@ -44,9 +44,10 @@ data:null,
      }
   },
   mounted(){
-  axios.get('http://localhost:8000/api/articles').then((response) => {
+      console.log('section is charged');
+  axios.get('./api/posts').then((response) => {
 	this.data = response.data;
-	console.log(this.data.titre)
+	console.log(this.data)
     }).catch((error) => {
 		console.log(error)
 	})
