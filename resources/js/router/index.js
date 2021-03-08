@@ -1,11 +1,17 @@
 import {createRouter, createWebHistory} from 'vue-router';
-import Section from '../components/Section';
+import Section from '../views/Section';
+import Detail from '../views/Detail';
 
 const routes = [
     {
-        path: '/Platz/public/',
+        path: '/',
         name: 'Section',
         component: Section
+    },
+    {
+        path: '/posts/:postId/:slug',
+        name: 'detail',
+        component: Detail
     },
 
 ]

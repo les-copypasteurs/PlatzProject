@@ -1,8 +1,10 @@
 import { createApp } from 'vue'
-import router from './router/index'
 import App from './App.vue'
+import router from './router'
 import axios from 'axios'
-import VueAxios from 'vue-axios'
-import store from "./store/index.js"
+import store from "./store"
 
-createApp(App).use(router, VueAxios, axios).mount('#app')
+
+createApp(App).use(router).use(store).use({ created(){
+    this.$store.dispatch('setPosts');
+}}).mount('#app')

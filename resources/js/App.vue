@@ -1,18 +1,19 @@
 <template>
-<div>
+  <div>
   <Header />
   <Filter />
   <Navbar />
   <router-view/>
   <Footer/>
-</div>
+
+  </div>
 </template>
 
 <script>
-import Footer from './components/Footer'
-import Navbar from './components/Navbar'
-import Header from './components/Header'
-import Filter from './components/Filter'
+import Footer from './views/Footer'
+import Navbar from './views/Navbar'
+import Header from './views/Header'
+import Filter from './views/Filter'
 
 export default {
   name: 'App',
@@ -21,7 +22,6 @@ export default {
     Navbar,
     Header,
     Filter
-
   }
 }
 </script>

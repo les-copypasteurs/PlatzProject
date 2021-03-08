@@ -1,16 +1,6 @@
 <template>
+<div>
   <div>
-   <div id="wrapper-oldnew">
-    <div class="oldnew">
-        <div class="wrapper-oldnew-prev">
-            <div id="oldnew-prev"></div>
-        </div>
-            <div class="wrapper-oldnew-next">
-            <div id="oldnew-next"></div>
-    </div>
-      </div>
-</div>
-
 	<div id="wrapper-thank">
     <div class="thank">
         <div class="thank-text">pl<span style="letter-spacing:-5px;">a</span>tz</div>
@@ -48,7 +38,7 @@
 
     <div id="wrapper-copyright">
 		<div class="copyright">
-    <div class="copy-text object">Copyright © 2016. Template by <a style="color:#D0D1D4;" href="https://dcrazed.com/">Dcrazed</a></div>
+    <div class="copy-text object"> © 2016. Template by <a style="color:#D0D1D4;" href="https://dcrazed.com/">Dcrazed</a></div>
 
 		<div class="wrapper-navbouton">
     <div class="google object">g</div>
@@ -59,11 +49,15 @@
     </div>
     </div>
   </div>
+
+</div>
 </template>
 
 <script>
-export default {
+
+  export default {
   name: 'Footer',
+
 }
 </script>
 
