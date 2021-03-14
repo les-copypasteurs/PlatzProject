@@ -177,6 +177,9 @@ body,html{
 	border-bottom:solid #EDEDED 1px;
 	opacity:1;
 }
+.part-info-image{
+	display: flex;
+}
 
 .navbar{
 	position:relative;

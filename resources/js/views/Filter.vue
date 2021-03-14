@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div is="filter-menu-visible">
 <div id="main-container-menu" class="object">
     <div class="container-menu">
 

@@ -4,7 +4,8 @@ import axios from 'axios'
 const store = createStore({
     state:{
         name: "Vue",
-        posts: []
+        posts: [],
+        q: ""
     },
     getters:{
         getName(state) {
@@ -12,6 +13,9 @@ const store = createStore({
         },
         getPosts(state){
             return state.posts
+        },
+        getSearch(state){
+            return state.q
         },
         getPostById(state){       
             return function (id){
@@ -25,15 +29,25 @@ const store = createStore({
     },
         SET_POSTS(state, data){
             state.posts = data;
+        },
+        SET_SEARCH(state, data){
+            state.q = data;
         }
-},
+    },
+
     actions:{
         setName({commit},data){
             commit('setName', data)
         },
         setPosts({commit}){
-            axios.get('/api/posts')
+            axios.get('api/posts')
             .then((response) => commit('SET_POSTS',response.data))
+        },
+        searchPost({commit}){
+            axios.get('api/posts/'+ this.state.q).then((response) => {
+                commit('SET_POSTS',response.data)
+                console.log(response.data)
+              })
         }
     }
 })

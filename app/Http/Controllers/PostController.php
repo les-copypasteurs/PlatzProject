@@ -15,8 +15,14 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
-        return response()->json($posts);
+        if(request('q') !== null){
+           $posts = Post::with(['categorie','user'])->where('content', 'like', '%'. request('q') . '%')->get();
+           return response()->json($posts);
+        }else {
+            $posts = Post::with(['categorie','user'])->get()->all();
+            return response()->json($posts);
+        }
+
     }
 
     /**

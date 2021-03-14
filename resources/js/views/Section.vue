@@ -14,14 +14,18 @@
 							<router-link :to="{ name: 'detail', params: { postId: post.id, slug: slugify(post.title) }}"> 
 								<img v-bind:src="'assets/img/' + post.image" alt="" />
 								<dl  style="overflow: hidden;">
-									<dt>{{post.titre}}</dt>
-									<dd>{{post.content}}</dd>
+									<dt>{{post.title}}</dt>
+									<dd>{{sliceString(post.content)}}</dd>
 								</dl>
 							 </router-link>
 
                           <div id="wrapper-part-info">
-                            <div class="part-info-image"><img src="assets/img/icon-psd.svg" alt="" width="28" height="28"/></div>
-                            <div id="part-info">{{post.titre}}</div>
+                            <div class="part-info-image">
+                              <div v-for="categorie in post.categorie" v-bind:key="categorie.id">
+                              <img v-bind:src="'assets/img/icon-' + categorie.name + '.svg'" alt="" width="28" height="28"/></div>
+                              </div>
+
+                            <div id="part-info">{{post.title}}</div>
 						</div>
                       </figure>
 </div>
@@ -47,11 +51,11 @@
 </template>
 
 <script>
+  import axios from 'axios'
   export default {
   name: 'Section',
   created(){
 	this.$store.dispatch('setPosts');
-	
   },
   computed: {
 	  posts(){
@@ -79,6 +83,10 @@
       slug = slug.replace(/\s+/g, '-');
       
       return slug;
+    },
+    sliceString: function(string){
+      let result = string.slice(0, 150);
+      return result;
     }
   }
  }

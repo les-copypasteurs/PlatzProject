@@ -7,7 +7,9 @@
                 <div class="title-item">
                 	<div class="title-icon"></div>
                     <div class="title-text">{{post.titre}}</div>
-                    <div class="title-text-2">Sept 25, 2015 by Onuur</div>
+                    <div class="title-text-2">{{moment(post.created_at)}} by
+                         {{post.user.name}}
+                    </div>
                 </div>
 
 				<div class="work">
@@ -93,6 +95,9 @@
 </template>
 
 <script>
+import moment from 'moment'
+
+
 export default {
   name: 'Detail',
   computed: {
@@ -101,6 +106,12 @@ export default {
         return this.$store.getters.getPostById(id)
     },
   }, 
+
+  methods: {
+  moment: function (date) {
+    return moment(date).format('DD-MM-YYYY');
+  }
+}
 }
 </script>
 
