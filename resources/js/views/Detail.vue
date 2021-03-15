@@ -15,7 +15,7 @@
 
 				<div class="work">
 					<figure class="white">
-							 <img src="/assets/img/psd-4.jpg" alt="" />
+							 <img v-bind:src="'/assets/img/' + post.image" alt="" />
 
                                         </figure>
 
