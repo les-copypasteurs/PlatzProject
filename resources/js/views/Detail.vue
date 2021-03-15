@@ -1,119 +1,98 @@
 <template>
-<div>
-<link rel="stylesheet" href="/css/detail.css">
-    <div class="container object">
-
-			<div id="main-container-image">
-
+    <div>
+        <link rel="stylesheet" href="/css/detail.css">
+        <div class="container object">
+            <div id="main-container-image">
                 <div class="title-item">
-                	<div class="title-icon"></div>
+                    <div class="title-icon"></div>
                     <div class="title-text">{{post.titre}}</div>
-                    <div class="title-text-2">{{moment(post.created_at)}} by
-                         {{post.user.name}}
+                    <div class="title-text-2">{{moment(post.created_at)}} by {{post.user.name}}
                     </div>
                 </div>
-
-				<div class="work">
-					<figure class="white">
-							 <img v-bind:src="'/assets/img/' + post.image" alt="" />
-
-                                        </figure>
-
-                <div class="wrapper-text-description">
-
-
-                	<div class="wrapper-file">
-                    	<div class="icon-file"><img src="/assets/img/icon-psdfile.svg" alt="" width="21" height="21"/></div>
-                        <div class="text-file">Photoshop</div>
-                    </div>
-
-                    <div class="wrapper-weight">
-                    	<div class="icon-weight"><img src="/assets/img/icon-weight.svg" alt="" width="20" height="23"/></div>
-                        <div class="text-weight">23 Mo</div>
-                    </div>
-
-                    <div class="wrapper-desc">
-                    	<div class="icon-desc"><img src="/assets/img/icon-desc.svg" alt="" width="24" height="24"/></div>
-                        <div class="text-desc">{{post.content}}</div>
-                    </div>
-
-                    <div class="wrapper-download">
-                    	<div class="icon-download"><img src="/assets/img/icon-download.svg" alt="" width="19" height="26"/></div>
-                        <div class="text-download"><a href="#"><b>Download</b></a></div>
-                    </div>
-
-                    <div class="wrapper-morefrom">
-                    	<div class="text-morefrom">More from .psd</div>
-                        <div class="image-morefrom">
-                        	<a href="#"><div class="image-morefrom-1"><img v-bind:src="'/assets/img/' + post.image" alt="" width="430" height="330"/></div></a>
+                <div class="work">
+                    <figure class="white">
+                        <img v-bind:src="'/assets/img/' + post.image" alt="" />
+                    </figure>
+                    <div class="wrapper-text-description">
+                        <div class="wrapper-file">
+                            <div class="icon-file"><img src="/assets/img/icon-psdfile.svg" alt="" width="21" height="21" /></div>
+                            <div class="text-file">Photoshop</div>
                         </div>
-                    </div>
-
-                </div>
-
-                        <div class="post-reply">
-                            <div id="title-post-send">
-                                <hr/><h2>Your comments</h2>
+                        <div class="wrapper-weight">
+                            <div class="icon-weight"><img src="/assets/img/icon-weight.svg" alt="" width="20" height="23" /></div>
+                            <div class="text-weight">23 Mo</div>
+                        </div>
+                        <div class="wrapper-desc">
+                            <div class="icon-desc"><img src="/assets/img/icon-desc.svg" alt="" width="24" height="24" /></div>
+                            <div class="text-desc">{{post.content}}</div>
+                        </div>
+                        <div class="wrapper-download">
+                            <div class="icon-download"><img src="/assets/img/icon-download.svg" alt="" width="19" height="26" /></div>
+                            <div class="text-download"><a href="#"><b>Download</b></a></div>
+                        </div>
+                        <div class="wrapper-morefrom">
+                            <div class="text-morefrom">More from .psd</div>
+                            <div class="image-morefrom">
+                                <a href="#">
+                                    <div class="image-morefrom-1"><img v-bind:src="'/assets/img/' + post.image" alt="" width="430" height="330" /></div>
+                                </a>
                             </div>
-
-
-                	</div>
-
-                	<div class="post-reply">
-                    	<div class="image-reply-post"></div>
-                    	<div class="name-reply-post">Igor vlademir</div>
-                    	<div class="text-reply-post">Awesome mockup, i like it very much ! It will help me for my website i was looking for since few days. Thank you a lot.</div>
-                	</div>
-
-                    <div class="post-reply-2">
-                    	<div class="image-reply-post-2"></div>
-                    	<div class="name-reply-post-2">Nathan Shaw</div>
-                    	<div class="text-reply-post-2">Well done ! I like the way you did it. Awesome ! </div>
-                	</div>
-
-                	<div class="post-send">
-                    	<div id="main-post-send">
-                            <div id="title-post-send">Add your comment</div>
-							<form id="contact" method="post" action="/onclickprod/formsubmit_op.asp">
-    							<fieldset>
-									<p><textarea id="message" name="message" maxlength="500" placeholder="Votre Message" tabindex="5" cols="30" rows="4"></textarea></p>
-								</fieldset>
-								<div style="text-align:center;"><input type="submit" name="envoi" value="Envoyer" /></div>
-  							</form>
                         </div>
-					</div>
+                    </div>
+                    <div class="post-reply">
+                        <div id="title-post-send">
+                            <hr/>
+                            <h2>Your comments</h2>
+                        </div>
+                    </div>
+                    <div class="post-reply">
+                        <div class="image-reply-post"></div>
+                        <div class="name-reply-post">Igor vlademir</div>
+                        <div class="text-reply-post">Awesome mockup, i like it very much ! It will help me for my website i was looking for since few days. Thank you a lot.</div>
+                    </div>
+                    <div class="post-reply-2">
+                        <div class="image-reply-post-2"></div>
+                        <div class="name-reply-post-2">Nathan Shaw</div>
+                        <div class="text-reply-post-2">Well done ! I like the way you did it. Awesome ! </div>
+                    </div>
+                    <div class="post-send">
+                        <div id="main-post-send">
+                            <div id="title-post-send">Add your comment</div>
+                            <form id="contact" method="post" action="/onclickprod/formsubmit_op.asp">
+                                <fieldset>
+                                    <p><textarea id="message" name="message" maxlength="500" placeholder="Votre Message" tabindex="5" cols="30" rows="4"></textarea></p>
+                                </fieldset>
+                                <div style="text-align:center;"><input type="submit" name="envoi" value="Envoyer" /></div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-			</div>
-		</div>
-
-  <div>
-    	<div class="thank">
-        	<div class="thank-text">bu<span style="letter-spacing:-5px;">rs</span>tfly</div>
-    	</div>
-	</div>
-
-  </div>
+            </div>
+        </div>
+        <div>
+            <div class="thank">
+                <div class="thank-text">bu<span style="letter-spacing:-5px;">rs</span>tfly</div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
-import moment from 'moment'
-
-
-export default {
-  name: 'Detail',
-  computed: {
-    post(){  
-        let id = this.$route.params.postId;
-        return this.$store.getters.getPostById(id)
-    },
-  }, 
-
-  methods: {
-  moment: function (date) {
-    return moment(date).format('DD-MM-YYYY');
-  }
-}
-}
+    import moment from 'moment'
+    export default {
+        name: 'Detail',
+        computed: {
+            post() {
+                let id = this.$route.params.postId;
+                return this.$store.getters.getPostById(id)
+            },
+        },
+        methods: {
+            moment: function(date) {
+                return moment(date).format('DD-MM-YYYY');
+            }
+        }
+    }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
