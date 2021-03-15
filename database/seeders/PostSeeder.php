@@ -15,11 +15,11 @@ class PostSeeder extends Seeder
     {
         \App\Models\Post::factory(40)->create();
 
-        foreach(range(1, 120) as $index)
+        foreach(range(1, 40) as $index)
         {
             \DB::table('posts_has_categories')->insert([
                 'categorie_id' => rand(1,10),
-                'post_id' => rand(1, 40)
+                'post_id' => $index
             ]);
         }
     }

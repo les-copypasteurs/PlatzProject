@@ -22,7 +22,7 @@ class CategorieFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->words(2,true),
+            'name' => $this->faker->randomElement(['psd', 'ai', 'ai2', 'eye', 'font', 'photo', 'themes', 'burst']),
             'created_at' => $this->faker->dateTimeBetween('-20 days', now()),        ];
     }
 }
