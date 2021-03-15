@@ -16568,33 +16568,40 @@ var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("dat
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-78b841b0");
 
-var _hoisted_1 = {
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("link", {
+  rel: "stylesheet",
+  href: "/css/detail.css"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_2 = {
   "class": "container object"
 };
-var _hoisted_2 = {
+var _hoisted_3 = {
   id: "main-container-image"
 };
-var _hoisted_3 = {
+var _hoisted_4 = {
   "class": "title-item"
 };
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "title-icon"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_5 = {
+var _hoisted_6 = {
   "class": "title-text"
 };
-var _hoisted_6 = {
+var _hoisted_7 = {
   "class": "title-text-2"
 };
-var _hoisted_7 = {
+var _hoisted_8 = {
   "class": "work"
 };
 
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("figure", {
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("figure", {
   "class": "white"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
   src: "/assets/img/psd-4.jpg",
@@ -16603,17 +16610,17 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 /* HOISTED */
 );
 
-var _hoisted_9 = {
+var _hoisted_10 = {
   "class": "wrapper-text-description"
 };
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"wrapper-file\" data-v-78b841b0><div class=\"icon-file\" data-v-78b841b0><img src=\"/assets/img/icon-psdfile.svg\" alt=\"\" width=\"21\" height=\"21\" data-v-78b841b0></div><div class=\"text-file\" data-v-78b841b0>Photoshop</div></div><div class=\"wrapper-weight\" data-v-78b841b0><div class=\"icon-weight\" data-v-78b841b0><img src=\"/assets/img/icon-weight.svg\" alt=\"\" width=\"20\" height=\"23\" data-v-78b841b0></div><div class=\"text-weight\" data-v-78b841b0>23 Mo</div></div>", 2);
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"wrapper-file\" data-v-78b841b0><div class=\"icon-file\" data-v-78b841b0><img src=\"/assets/img/icon-psdfile.svg\" alt=\"\" width=\"21\" height=\"21\" data-v-78b841b0></div><div class=\"text-file\" data-v-78b841b0>Photoshop</div></div><div class=\"wrapper-weight\" data-v-78b841b0><div class=\"icon-weight\" data-v-78b841b0><img src=\"/assets/img/icon-weight.svg\" alt=\"\" width=\"20\" height=\"23\" data-v-78b841b0></div><div class=\"text-weight\" data-v-78b841b0>23 Mo</div></div>", 2);
 
-var _hoisted_12 = {
+var _hoisted_13 = {
   "class": "wrapper-desc"
 };
 
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "icon-desc"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
   src: "/assets/img/icon-desc.svg",
@@ -16624,35 +16631,35 @@ var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
 /* HOISTED */
 );
 
-var _hoisted_14 = {
+var _hoisted_15 = {
   "class": "text-desc"
 };
 
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"wrapper-download\" data-v-78b841b0><div class=\"icon-download\" data-v-78b841b0><img src=\"/assets/img/icon-download.svg\" alt=\"\" width=\"19\" height=\"26\" data-v-78b841b0></div><div class=\"text-download\" data-v-78b841b0><a href=\"#\" data-v-78b841b0><b data-v-78b841b0>Download</b></a></div></div>", 1);
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"wrapper-download\" data-v-78b841b0><div class=\"icon-download\" data-v-78b841b0><img src=\"/assets/img/icon-download.svg\" alt=\"\" width=\"19\" height=\"26\" data-v-78b841b0></div><div class=\"text-download\" data-v-78b841b0><a href=\"#\" data-v-78b841b0><b data-v-78b841b0>Download</b></a></div></div>", 1);
 
-var _hoisted_16 = {
+var _hoisted_17 = {
   "class": "wrapper-morefrom"
 };
 
-var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "text-morefrom"
 }, "More from .psd", -1
 /* HOISTED */
 );
 
-var _hoisted_18 = {
+var _hoisted_19 = {
   "class": "image-morefrom"
 };
-var _hoisted_19 = {
+var _hoisted_20 = {
   href: "#"
 };
-var _hoisted_20 = {
+var _hoisted_21 = {
   "class": "image-morefrom-1"
 };
 
-var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"post-reply\" data-v-78b841b0><div id=\"title-post-send\" data-v-78b841b0><hr data-v-78b841b0><h2 data-v-78b841b0>Your comments</h2></div></div><div class=\"post-reply\" data-v-78b841b0><div class=\"image-reply-post\" data-v-78b841b0></div><div class=\"name-reply-post\" data-v-78b841b0>Igor vlademir</div><div class=\"text-reply-post\" data-v-78b841b0>Awesome mockup, i like it very much ! It will help me for my website i was looking for since few days. Thank you a lot.</div></div><div class=\"post-reply-2\" data-v-78b841b0><div class=\"image-reply-post-2\" data-v-78b841b0></div><div class=\"name-reply-post-2\" data-v-78b841b0>Nathan Shaw</div><div class=\"text-reply-post-2\" data-v-78b841b0>Well done ! I like the way you did it. Awesome ! </div></div>", 3);
+var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"post-reply\" data-v-78b841b0><div id=\"title-post-send\" data-v-78b841b0><hr data-v-78b841b0><h2 data-v-78b841b0>Your comments</h2></div></div><div class=\"post-reply\" data-v-78b841b0><div class=\"image-reply-post\" data-v-78b841b0></div><div class=\"name-reply-post\" data-v-78b841b0>Igor vlademir</div><div class=\"text-reply-post\" data-v-78b841b0>Awesome mockup, i like it very much ! It will help me for my website i was looking for since few days. Thank you a lot.</div></div><div class=\"post-reply-2\" data-v-78b841b0><div class=\"image-reply-post-2\" data-v-78b841b0></div><div class=\"name-reply-post-2\" data-v-78b841b0>Nathan Shaw</div><div class=\"text-reply-post-2\" data-v-78b841b0>Well done ! I like the way you did it. Awesome ! </div></div>", 3);
 
-var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "post-send"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   id: "main-post-send"
@@ -16682,7 +16689,7 @@ var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
 /* HOISTED */
 );
 
-var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "thank"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "thank-text"
@@ -16697,20 +16704,20 @@ var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.post.titre), 1
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.post.titre), 1
   /* TEXT */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.moment($options.post.created_at)) + " by " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.post.user.name), 1
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.moment($options.post.created_at)) + " by " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.post.user.name), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_9, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_12, [_hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.post.content), 1
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_10, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.post.content), 1
   /* TEXT */
-  )]), _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+  )]), _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_17, [_hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
     src: '/assets/img/' + $options.post.image,
     alt: "",
     width: "430",
     height: "330"
   }, null, 8
   /* PROPS */
-  , ["src"])])])])])]), _hoisted_21, _hoisted_24])])]), _hoisted_25]);
+  , ["src"])])])])])]), _hoisted_22, _hoisted_25])])]), _hoisted_26]);
 });
 
 /***/ }),
@@ -16819,7 +16826,7 @@ var _hoisted_4 = {
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "logo"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
-  src: "assets/img/logo-burst.png",
+  src: "/assets/img/logo-burst.png",
   alt: "logo platz",
   height: "38",
   width: "90"
@@ -16878,7 +16885,7 @@ var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("dat
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-ac496422");
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div id=\"wrapper-navbar\" data-v-ac496422><div class=\"navbar object\" data-v-ac496422><div id=\"wrapper-bouton-icon\" data-v-ac496422><div id=\"bouton-ai\" data-v-ac496422><img src=\"assets/img/icon-ai.svg\" alt=\"illustrator\" title=\"Illustrator\" height=\"28\" width=\"28\" data-v-ac496422></div><div id=\"bouton-psd\" data-v-ac496422><img src=\"assets/img/icon-psd.svg\" alt=\"photoshop\" title=\"Photoshop\" height=\"28\" width=\"28\" data-v-ac496422></div><div id=\"bouton-theme\" data-v-ac496422><img src=\"assets/img/icon-themes.svg\" alt=\"theme\" title=\"Theme\" height=\"28\" width=\"28\" data-v-ac496422></div><div id=\"bouton-font\" data-v-ac496422><img src=\"assets/img/icon-font.svg\" alt=\"font\" title=\"Font\" height=\"28\" width=\"28\" data-v-ac496422></div><div id=\"bouton-photo\" data-v-ac496422><img src=\"assets/img/icon-photo.svg\" alt=\"photo\" title=\"Photo\" height=\"28\" width=\"28\" data-v-ac496422></div><div id=\"bouton-premium\" data-v-ac496422><img src=\"assets/img/icon-premium.svg\" alt=\"premium\" title=\"Premium\" height=\"28\" width=\"28\" data-v-ac496422></div></div></div></div>", 1);
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div id=\"wrapper-navbar\" data-v-ac496422><div class=\"navbar object\" data-v-ac496422><div id=\"wrapper-bouton-icon\" data-v-ac496422><div id=\"bouton-ai\" data-v-ac496422><img src=\"/assets/img/icon-ai.svg\" alt=\"illustrator\" title=\"Illustrator\" height=\"28\" width=\"28\" data-v-ac496422></div><div id=\"bouton-psd\" data-v-ac496422><img src=\"/assets/img/icon-psd.svg\" alt=\"photoshop\" title=\"Photoshop\" height=\"28\" width=\"28\" data-v-ac496422></div><div id=\"bouton-theme\" data-v-ac496422><img src=\"/assets/img/icon-themes.svg\" alt=\"theme\" title=\"Theme\" height=\"28\" width=\"28\" data-v-ac496422></div><div id=\"bouton-font\" data-v-ac496422><img src=\"/assets/img/icon-font.svg\" alt=\"font\" title=\"Font\" height=\"28\" width=\"28\" data-v-ac496422></div><div id=\"bouton-photo\" data-v-ac496422><img src=\"/assets/img/icon-photo.svg\" alt=\"photo\" title=\"Photo\" height=\"28\" width=\"28\" data-v-ac496422></div><div id=\"bouton-premium\" data-v-ac496422><img src=\"/assets/img/icon-premium.svg\" alt=\"premium\" title=\"Premium\" height=\"28\" width=\"28\" data-v-ac496422></div></div></div></div>", 1);
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
@@ -16906,47 +16913,54 @@ var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("dat
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-3d651896");
 
-var _hoisted_1 = {
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("link", {
+  rel: "stylesheet",
+  href: "/css/style.css"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_2 = {
   id: "wrapper-container"
 };
-var _hoisted_2 = {
+var _hoisted_3 = {
   "class": "container object"
 };
-var _hoisted_3 = {
+var _hoisted_4 = {
   id: "main-container-image"
 };
-var _hoisted_4 = {
+var _hoisted_5 = {
   "class": "work"
 };
-var _hoisted_5 = {
+var _hoisted_6 = {
   "class": "white"
 };
-var _hoisted_6 = {
+var _hoisted_7 = {
   style: {
     "overflow": "hidden"
   }
 };
-var _hoisted_7 = {
+var _hoisted_8 = {
   id: "wrapper-part-info"
 };
-var _hoisted_8 = {
+var _hoisted_9 = {
   "class": "part-info-image"
 };
-var _hoisted_9 = {
+var _hoisted_10 = {
   id: "part-info"
 };
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div id=\"wrapper-oldnew\" data-v-3d651896><div class=\"oldnew\" data-v-3d651896><div class=\"wrapper-oldnew-prev\" data-v-3d651896><div id=\"oldnew-prev\" data-v-3d651896></div></div><div class=\"wrapper-oldnew-next\" data-v-3d651896><div id=\"oldnew-next\" data-v-3d651896></div></div></div></div>", 1);
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div id=\"wrapper-oldnew\" data-v-3d651896><div class=\"oldnew\" data-v-3d651896><div class=\"wrapper-oldnew-prev\" data-v-3d651896><div id=\"oldnew-prev\" data-v-3d651896></div></div><div class=\"wrapper-oldnew-next\" data-v-3d651896><div id=\"oldnew-next\" data-v-3d651896></div></div></div></div>", 1);
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("section", _hoisted_4, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($options.posts, function (post) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("section", _hoisted_5, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($options.posts, function (post) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", {
       key: post.id
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("figure", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("figure", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
       to: {
         name: 'detail',
         params: {
@@ -16957,11 +16971,11 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     }, {
       "default": _withId(function () {
         return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
-          src: 'assets/img/' + post.image,
+          src: '/assets/img/' + post.image,
           alt: ""
         }, null, 8
         /* PROPS */
-        , ["src"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("dl", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("dt", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.title), 1
+        , ["src"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("dl", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("dt", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.title), 1
         /* TEXT */
         ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("dd", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.sliceString(post.content)), 1
         /* TEXT */
@@ -16972,7 +16986,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
 
     }, 1032
     /* PROPS, DYNAMIC_SLOTS */
-    , ["to"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_8, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(post.categorie, function (categorie) {
+    , ["to"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_9, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(post.categorie, function (categorie) {
       return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", {
         key: categorie.id
       }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
@@ -16985,12 +16999,12 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
       , ["src"])]);
     }), 128
     /* KEYED_FRAGMENT */
-    ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.title), 1
+    ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.title), 1
     /* TEXT */
     )])])]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])])])]), _hoisted_10]);
+  ))])])])]), _hoisted_11]);
 });
 
 /***/ }),

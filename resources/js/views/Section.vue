@@ -1,5 +1,6 @@
 <template>
 <div>
+  <link rel="stylesheet" href="/css/style.css">
   <div id="wrapper-container">
 
 		<div class="container object">
@@ -12,7 +13,7 @@
 						<figure class="white">
 							
 							<router-link :to="{ name: 'detail', params: { postId: post.id, slug: slugify(post.title) }}"> 
-								<img v-bind:src="'assets/img/' + post.image" alt="" />
+								<img v-bind:src="'/assets/img/' + post.image" alt="" />
 								<dl  style="overflow: hidden;">
 									<dt>{{post.title}}</dt>
 									<dd>{{sliceString(post.content)}}</dd>

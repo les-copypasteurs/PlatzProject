@@ -1,5 +1,6 @@
 <template>
 <div>
+<link rel="stylesheet" href="/css/detail.css">
     <div class="container object">
 
 			<div id="main-container-image">
