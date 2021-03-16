@@ -7,6 +7,8 @@ const store = createStore({
         name: "Vue",
         posts: [],
         filter:[1,2,3,4,5],
+        limit: 20,
+        index: 0,
         q: ""
     },
     getters:{
@@ -15,6 +17,12 @@ const store = createStore({
         },
         getFilter(state){
             return state.filter
+        },
+        getLimit(state){
+            return state.limit
+        },
+        getIndex(state){
+            return state.index
         },
         getSearch(state){
             return state.q
@@ -31,6 +39,18 @@ const store = createStore({
         },
         SET_FILTER(state, data){
             state.filter = data;
+        },
+        SET_LIMIT(state, data){
+            state.limit = data;
+        },
+        SET_INDEX(state, data){
+            if (data > 0) {
+                if (data < state.posts.length) {
+                    state.index = data;
+                }
+            }else{
+                state.index = 0;
+            }
         },
         SET_SEARCH(state, data){
             state.q = data;
