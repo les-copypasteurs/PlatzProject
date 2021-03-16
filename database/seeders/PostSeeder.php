@@ -18,7 +18,7 @@ class PostSeeder extends Seeder
         foreach(range(1, 40) as $index)
         {
             \DB::table('posts_has_categories')->insert([
-                'categorie_id' => rand(1,10),
+                'categorie_id' => rand(1,5),
                 'post_id' => $index
             ]);
         }

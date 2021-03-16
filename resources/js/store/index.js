@@ -6,11 +6,15 @@ const store = createStore({
     state:{
         name: "Vue",
         posts: [],
+        filter:[1,2,3,4,5],
         q: ""
     },
     getters:{
         getPosts(state){
             return state.posts
+        },
+        getFilter(state){
+            return state.filter
         },
         getSearch(state){
             return state.q
@@ -24,6 +28,9 @@ const store = createStore({
     mutations:{
         SET_POSTS(state, data){
             state.posts = data;
+        },
+        SET_FILTER(state, data){
+            state.filter = data;
         },
         SET_SEARCH(state, data){
             state.q = data;

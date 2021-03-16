@@ -34,6 +34,11 @@
 <script>
     export default {
         name: 'Filter',
+        computed: {
+            posts() {
+                return this.$store.getters.getPosts;
+            }
+        }
     }
 </script>
 

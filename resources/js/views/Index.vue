@@ -6,22 +6,24 @@
         <div id="main-container-image">
           <section class="work">
             <div v-for="post in posts" v-bind:key="post.id">
-              <figure class="white">
-                <router-link :to="{ name: 'show', params: { postId: post.id, slug: slugify(post.title) }}">
-                  <img v-bind:src="'/assets/img/' + post.image" alt="" />
-                  <dl style="overflow: hidden;">
-                    <dt>{{post.title}}</dt>
-                    <dd>{{sliceString(post.content)}}</dd>
-                  </dl>
-                </router-link>
-                <div id="wrapper-part-info">
-                  <div class="part-info-image">
-                    <div v-for="categorie in post.categorie" v-bind:key="categorie.id">
-                      <img v-bind:src="'assets/img/icon-' + categorie.name + '.svg'" alt="" width="28" height="28" /></div>
+              <div v-if="filter.includes(post.categorie[0].id)">
+                <figure class="white">
+                  <router-link :to="{ name: 'show', params: { postId: post.id, slug: slugify(post.title) }}">
+                    <img v-bind:src="'/assets/img/' + post.image" alt="" />
+                    <dl style="overflow: hidden;">
+                      <dt>{{post.title}}</dt>
+                      <dd>{{sliceString(post.content)}}</dd>
+                    </dl>
+                  </router-link>
+                  <div id="wrapper-part-info">
+                    <div class="part-info-image">
+                      <div v-for="categorie in post.categorie" v-bind:key="categorie.id">
+                        <img v-bind:src="'assets/img/icon-' + categorie.name + '.svg'" alt="" width="28" height="28" /></div>
+                    </div>
+                    <div id="part-info">{{post.title}}</div>
                   </div>
-                  <div id="part-info">{{post.title}}</div>
-                </div>
-              </figure>
+                </figure>
+              </div>
             </div>
           </section>
         </div>
@@ -41,12 +43,14 @@
 </template>
 
 <script>
-
-export default {
+  export default {
     name: 'Index',
     computed: {
       posts() {
         return this.$store.getters.getPosts;
+      },
+      filter() {
+        return this.$store.getters.getFilter;
       }
     },
     methods: {
