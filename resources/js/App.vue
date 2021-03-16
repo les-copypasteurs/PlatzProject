@@ -1,11 +1,10 @@
 <template>
   <div>
-  <Header />
-  <Filter />
-  <Navbar />
-  <router-view/>
-  <Footer/>
-
+    <Header />
+    <Filter />
+    <Navbar />
+    <router-view/>
+    <Footer/>
   </div>
 </template>
 
@@ -29,6 +28,7 @@ export default {
     }
 }
 </script>
+
 
 <style>
 

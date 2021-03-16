@@ -21,4 +21,3 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/posts/{q?}', [PostController::class, 'index']);
 Route::get('/', [PostController::class, 'index']);
-Route::get('/articles', [ArticlesController::class, 'index']);
