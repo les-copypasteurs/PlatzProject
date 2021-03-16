@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import Footer from './views/Footer'
-import Navbar from './views/Navbar'
-import Header from './views/Header'
-import Filter from './views/Filter'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
+import Header from './components/Header'
+import Filter from './components/Filter'
 
 export default {
   name: 'App',
@@ -22,7 +22,11 @@ export default {
     Navbar,
     Header,
     Filter
-  }
+  },
+  created() {
+        this.$store.dispatch('setPosts');
+        // this.$store.dispatch('setCategories');
+    }
 }
 </script>
 
