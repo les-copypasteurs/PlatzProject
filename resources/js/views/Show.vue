@@ -58,19 +58,11 @@
 
 
                 	</div>
-
-                	<div class="post-reply">
-                    	<div class="image-reply-post"></div>
-                    	<div class="name-reply-post">Igor vlademir</div>
-                    	<div class="text-reply-post">Awesome mockup, i like it very much ! It will help me for my website i was looking for since few days. Thank you a lot.</div>
+                	<div class="post-reply" v-for="(comment, i) in post.comment" v-bind:key="comment.id">
+                    	<div class="image-reply-post" v-bind:style="{ 'background-image': 'url(/assets/img/' + comment.user.avatar + ')' }"></div>
+                    	<div class="name-reply-post">{{comment.user.name}}</div>
+                    	<div class="text-reply-post">{{comment.content}}</div>
                 	</div>
-
-                    <div class="post-reply-2">
-                    	<div class="image-reply-post-2"></div>
-                    	<div class="name-reply-post-2">Nathan Shaw</div>
-                    	<div class="text-reply-post-2">Well done ! I like the way you did it. Awesome ! </div>
-                	</div>
-
                 	<div class="post-send">
                     	<div id="main-post-send">
                             <div id="title-post-send">Add your comment</div>

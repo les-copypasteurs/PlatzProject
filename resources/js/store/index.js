@@ -60,11 +60,15 @@ const store = createStore({
     actions:{
         setPosts({commit}){
             axios.get('/api/posts')
-            .then((response) => commit('SET_POSTS',response.data)
-            )
+            .then((response) => {
+                commit('SET_POSTS',response.data)
+                console.log(response.data)
+
+            })
         },
         searchPost({commit}){
-            axios.get('/api/posts/'+ this.state.q).then((response) => {
+            axios.get('/api/posts/'+ this.state.q)
+            .then((response) => {
                 commit('SET_POSTS',response.data)
                 console.log(response.data)
               })
