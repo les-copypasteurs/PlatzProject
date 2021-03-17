@@ -7,7 +7,6 @@
           <section class="work">
             <div v-for="(post, i) in posts" v-bind:key="post.id">
               <div v-if="filter.includes(post.categorie[0].id) && i < (index + limit) && i >= index">
-                <!-- <div>{{i}} {{limit}}</div> -->
                 <figure class="white">
                   <router-link :to="{ name: 'show', params: { postId: post.id, slug: slugify(post.title) }}">
                     <img v-bind:src="'/assets/img/' + post.image" alt="" />
@@ -64,30 +63,30 @@
       setIndex(value) {
         this.$store.commit('SET_INDEX', value)
       },
-    slugify: function(posts) {
-      var slug = "";
-      var titleLower = posts.toLowerCase();
-      // Letter "e"
-      slug = titleLower.replace(/e|é|è|ẽ|ẻ|ẹ|ê|ế|ề|ễ|ể|ệ/gi, 'e');
-      // Letter "a"
-      slug = slug.replace(/a|á|à|ã|ả|ạ|ă|ắ|ằ|ẵ|ẳ|ặ|â|ấ|ầ|ẫ|ẩ|ậ/gi, 'a');
-      // Letter "o"
-      slug = slug.replace(/o|ó|ò|õ|ỏ|ọ|ô|ố|ồ|ỗ|ổ|ộ|ơ|ớ|ờ|ỡ|ở|ợ/gi, 'o');
-      // Letter "u"
-      slug = slug.replace(/u|ú|ù|ũ|ủ|ụ|ư|ứ|ừ|ữ|ử|ự/gi, 'u');
-      // Letter "d"
-      slug = slug.replace(/đ/gi, 'd');
-      // Trim the last whitespace
-      slug = slug.replace(/\s*$/g, '');
-      // Change whitespace to "-"
-      slug = slug.replace(/\s+/g, '-');
-      return slug;
-    },
-    sliceString: function(string) {
-      let result = string.slice(0, 150);
-      return result;
+      slugify: function(posts) {
+        var slug = "";
+        var titleLower = posts.toLowerCase();
+        // Letter "e"
+        slug = titleLower.replace(/e|é|è|ẽ|ẻ|ẹ|ê|ế|ề|ễ|ể|ệ/gi, 'e');
+        // Letter "a"
+        slug = slug.replace(/a|á|à|ã|ả|ạ|ă|ắ|ằ|ẵ|ẳ|ặ|â|ấ|ầ|ẫ|ẩ|ậ/gi, 'a');
+        // Letter "o"
+        slug = slug.replace(/o|ó|ò|õ|ỏ|ọ|ô|ố|ồ|ỗ|ổ|ộ|ơ|ớ|ờ|ỡ|ở|ợ/gi, 'o');
+        // Letter "u"
+        slug = slug.replace(/u|ú|ù|ũ|ủ|ụ|ư|ứ|ừ|ữ|ử|ự/gi, 'u');
+        // Letter "d"
+        slug = slug.replace(/đ/gi, 'd');
+        // Trim the last whitespace
+        slug = slug.replace(/\s*$/g, '');
+        // Change whitespace to "-"
+        slug = slug.replace(/\s+/g, '-');
+        return slug;
+      },
+      sliceString: function(string) {
+        let result = string.slice(0, 150);
+        return result;
+      }
     }
-  }
   }
 </script>
 
