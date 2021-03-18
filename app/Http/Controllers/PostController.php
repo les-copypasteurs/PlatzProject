@@ -19,7 +19,7 @@ class PostController extends Controller
            $posts = Post::with(['categorie','user'])->where('content', 'like', '%'. request('q') . '%')->get();
            return response()->json($posts);
         }else {
-            $posts = Post::with(['categorie','user'])->get()->all();
+            $posts = Post::with(['categorie','user','comment','comment.user'])->get()->all();
             return response()->json($posts);
         }
 
