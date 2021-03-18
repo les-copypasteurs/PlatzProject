@@ -9,11 +9,7 @@ const store = createStore({
         filter:[1,2,3,4,5],
         limit: 20,
         index: 0,
-        q: "",
-        newComment: {
-            content: "hello",
-            user: 1
-        }
+        q: ""
     },
     getters:{
         getPosts(state){
@@ -58,12 +54,6 @@ const store = createStore({
         },
         SET_SEARCH(state, data){
             state.q = data;
-        },
-        SET_COMMENT(state, data){
-            state.newComment = data;
-        },
-        SET_NEWCOMMENT(state, data){
-            state.posts[data.post_id].comments = data;
         }
     },
 
@@ -80,13 +70,6 @@ const store = createStore({
             axios.get('/api/posts/'+ this.state.q)
             .then((response) => {
                 commit('SET_POSTS',response.data)
-                console.log(response.data)
-              })
-        },
-        addComment({commit}){
-            axios.post('/api/comments/create'+ this.state.newComment)
-            .then((response) => {
-                commit('SET_COMMENT',response.data)
                 console.log(response.data)
               })
         }

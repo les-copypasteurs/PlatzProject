@@ -80,17 +80,13 @@
 		name: 'Show',
 		data: function() {
 			return {
-				comment: ""
+				comment: "",
 			}
 		},
 		computed: {
 			post() {
 				let id = this.$route.params.postId;
 				return this.$store.getters.getPostById(id)
-			},
-			addComment(value) {
-				console.log(value);
-				this.$store.commit('SET_NEWCOMMENT', value)
 			}
 		},
 		methods: {
@@ -103,37 +99,13 @@
 						user_id: "1",
 						content: this.comment
 					})
-					.then(function(response) {
-						console.log(response);
-						// this.$store.commit('SET_NEWCOMMENT', value)
-						console.log(this.$store.getters.getPostById("1"));
-
+					.then((response) => {
+						this.comment = ""
+						this.$store.dispatch('setPosts')
 					})
 					.catch(function(error) {
-						// console.log(error);
+						console.log(error);
 					});
-				// INSERT INTO `comments` (`id`, `created_at`, `updated_at`, `content`, `user_id`, `post_id`) VALUES (NULL, NULL, NULL, 'sdfgsdgf', '2', '11')
-				// let id = this.$route.params.postId;
-				// axios.post('/api/comments/create', {
-				// 		post_id: "1",
-				// 		user_id: "1",
-				// 		content: 'gshsdfgsdfg',
-				// 	}).then(({
-				// 		data
-				// 		// console.log(data)
-				// 	}) => {
-				// 		console.log(data)
-				// 		// console.log(post_id)
-				// 		// this.commentaires.push(data)
-				// 		// this.content = ""
-				// 		// this.errors = {}
-				// 		// this.form.autheur = ""
-				// 	})
-				// 	.catch(error => {
-				// 		console.dir(error.response.data.errors)
-				// 		// this.errors = error.response.data.errors
-				// 	})
-				// console.log('response.data')
 			},
 		},
 	}
