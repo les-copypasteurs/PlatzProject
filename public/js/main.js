@@ -16760,26 +16760,91 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm-bundler.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm-bundler.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 
-var store = (0,vuex__WEBPACK_IMPORTED_MODULE_0__.createStore)({
+
+var store = (0,vuex__WEBPACK_IMPORTED_MODULE_1__.createStore)({
   state: {
-    name: "Vue"
+    name: "Vue",
+    postsDB: [],
+    posts: [],
+    filter: [1, 2, 3, 4, 5],
+    limit: 20,
+    index: 0,
+    q: ""
   },
   getters: {
-    getName: function getName(state) {
-      return state.name;
+    getPostsDB: function getPostsDB(state) {
+      return state.postsDB;
+    },
+    getPosts: function getPosts(state) {
+      return state.posts;
+    },
+    getFilter: function getFilter(state) {
+      return state.filter;
+    },
+    getLimit: function getLimit(state) {
+      return state.limit;
+    },
+    getIndex: function getIndex(state) {
+      return state.index;
+    },
+    getSearch: function getSearch(state) {
+      return state.q;
+    },
+    getPostById: function getPostById(state) {
+      return function (id) {
+        return state.posts.find(function (post) {
+          return post.id == id;
+        });
+      };
     }
   },
   mutations: {
-    SET_NAME: function SET_NAME(state, data) {
-      state.name = data;
+    SET_POSTSDB: function SET_POSTSDB(state, data) {
+      state.postsDB = data;
+    },
+    SET_POSTS: function SET_POSTS(state, data) {
+      state.posts = data;
+    },
+    SET_FILTER: function SET_FILTER(state, data) {
+      state.filter = data;
+    },
+    SET_LIMIT: function SET_LIMIT(state, data) {
+      state.limit = data;
+    },
+    SET_INDEX: function SET_INDEX(state, data) {
+      if (data > 0) {
+        if (data < state.posts.length) {
+          state.index = data;
+        }
+      } else {
+        state.index = 0;
+      }
+    },
+    SET_SEARCH: function SET_SEARCH(state, data) {
+      state.q = data;
     }
   },
   actions: {
-    setName: function setName(_ref, data) {
+    setPostsDB: function setPostsDB(_ref) {
+      var _this = this;
+
       var commit = _ref.commit;
-      commit('setName', data);
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/posts').then(function (response) {
+        commit('SET_POSTSDB', response.data);
+        commit('SET_POSTS', _this.state.postsDB);
+        console.log(_this.state.postsDB);
+      });
+    },
+    searchPost: function searchPost(_ref2) {
+      var commit = _ref2.commit;
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/posts/' + this.state.q).then(function (response) {
+        commit('SET_POSTS', response.data);
+        console.log(response.data);
+      });
     }
   }
 });
