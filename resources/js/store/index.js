@@ -70,16 +70,9 @@ const store = createStore({
             .then((response) => {
                 commit('SET_POSTSDB',response.data);
                 commit('SET_POSTS', this.state.postsDB)
-                console.log(this.state.postsDB)
+                // console.log(this.state.postsDB)
 
             })
-        },
-        searchPost({commit}){
-            axios.get('/api/posts/'+ this.state.q)
-            .then((response) => {
-                commit('SET_POSTS',response.data)
-                console.log(response.data)
-              })
         }
     }
 })

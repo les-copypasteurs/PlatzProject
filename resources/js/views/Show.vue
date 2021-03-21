@@ -4,7 +4,9 @@
 		<div class="container object">
 			<div id="main-container-image">
 				<div class="title-item">
-					<div class="title-icon"></div>
+					<div v-for="categorie in post.categorie" v-bind:key="categorie.id">
+						<div class="title-icon" v-bind:style="{ 'background-image': 'url(/assets/img/icon-' + categorie.name + '.svg)' }"></div>
+					</div>
 					<div class="title-text">{{post.title}}</div>
 					<div class="title-text-2">{{moment(post.created_at)}} by {{post.user.name}}
 					</div>
@@ -15,8 +17,10 @@
 					</figure>
 					<div class="wrapper-text-description">
 						<div class="wrapper-file">
-							<div class="icon-file"><img src="/assets/img/icon-psdfile.svg" alt="" width="21" height="21" /></div>
-							<div class="text-file">Photoshop</div>
+							<div class="icon-file">
+								<img v-bind:src="'/assets/img/icon-' + post.categorie[0].name + '.svg'" v-bind:style="{ 'filter': 'grayscale(1)' }" alt="" width="21" height="21" />
+								</div>
+							<div class="text-file">{{post.categorie[0].name}}</div>
 						</div>
 						<div class="wrapper-weight">
 							<div class="icon-weight"><img src="/assets/img/icon-weight.svg" alt="" width="20" height="23" /></div>
@@ -30,49 +34,51 @@
 							<div class="icon-download"><img src="/assets/img/icon-download.svg" alt="" width="19" height="26" /></div>
 							<div class="text-download"><a href="#"><b>Download</b></a></div>
 						</div>
-
-
 						<div class="wrapper-morefrom">
-							<div class="text-morefrom">More from .psd</div>
+							<div class="text-morefrom">More from {{post.categorie[0].name}}</div>
 							<div class="image-morefrom">
-								<a href="#">
-									<div class="image-morefrom-1"><img v-bind:src="'/assets/img/' + post.image" alt="" width="430" height="330" /></div>
-								</a>
+								<div v-for="(post, i) in morePostFromCategorie" v-bind:key="post.id">
+									<a href="#">
+										<router-link :to="{ name: 'show', params: { postId: post.id, slug: slugify(post.title) }}">
+											<div :class="'image-morefrom-' + (i + 1)">
+												<img v-bind:src="'/assets/img/' + post.image" alt="" width="430" height="330" />
+											</div>
+										</router-link>
+									</a>
+								</div>
 							</div>
 						</div>
-
-
 					</div>
-					<div class="post-reply">
-						<div id="title-post-send">
-							<hr/>
-							<h2>Your comments</h2>
-						</div>
+				</div>
+				<div class="post-reply">
+					<div id="title-post-send">
+						<hr/>
+						<h2>Your comments</h2>
 					</div>
-					<div class="post-reply" v-for="(comment) in post.comment" v-bind:key="comment.id">
-						<div class="image-reply-post" v-bind:style="{ 'background-image': 'url(/assets/img/' + comment.user.avatar + ')' }"></div>
-						<div class="name-reply-post">{{comment.user.name}}</div>
-						<div class="text-reply-post">{{comment.content}}</div>
-					</div>
-					<div class="post-send">
-						<div id="main-post-send">
-							<div id="title-post-send">Add your comment</div>
-							<form id="contact" @submit.prevent="newComment">
-								<fieldset>
-									<p><textarea id="message" name="message" maxlength="500" placeholder="Votre Message" v-model="comment" tabindex="5" cols="30" rows="4"></textarea></p>
-								</fieldset>
-								<div style="text-align:center;">
-									<input type="submit" name="envoi" value="Envoyer" /></div>
-							</form>
-						</div>
+				</div>
+				<div class="post-reply" v-for="(comment) in post.comment" v-bind:key="comment.id">
+					<div class="image-reply-post" v-bind:style="{ 'background-image': 'url(/assets/img/' + comment.user.avatar + ')' }"></div>
+					<div class="name-reply-post">{{comment.user.name}}</div>
+					<div class="text-reply-post">{{comment.content}}</div>
+				</div>
+				<div class="post-send">
+					<div id="main-post-send">
+						<div id="title-post-send">Add your comment</div>
+						<form id="contact" @submit.prevent="newComment">
+							<fieldset>
+								<p><textarea id="message" name="message" maxlength="500" placeholder="Votre Message" v-model="comment" tabindex="5" cols="30" rows="4"></textarea></p>
+							</fieldset>
+							<div style="text-align:center;">
+								<input type="submit" name="envoi" value="Envoyer" /></div>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div>
-			<div class="thank">
-				<div class="thank-text">bu<span style="letter-spacing:-5px;">rs</span>tfly</div>
-			</div>
+	</div>
+	<div>
+		<div class="thank">
+			<div class="thank-text">bu<span style="letter-spacing:-5px;">rs</span>tfly</div>
 		</div>
 	</div>
 </template>
@@ -91,6 +97,19 @@
 			post() {
 				let id = this.$route.params.postId;
 				return this.$store.getters.getPostById(id)
+			},
+			morePostFromCategorie() {
+				let data = []
+				for (let el of this.$store.getters.getPostsDB) {
+					if (el.categorie[0].id == this.$store.getters.getPostById(this.$route.params.postId).categorie[0].id && el.id != this.$route.params.postId) {
+						data.push(el)
+						console.log("push");
+					}
+					if (data.length === 4) {
+						break;
+					}
+				}
+				return data
 			}
 		},
 		methods: {
@@ -112,6 +131,25 @@
 						console.log(error);
 					});
 			},
+			slugify: function(posts) {
+				var slug = "";
+				var titleLower = posts.toLowerCase();
+				// Letter "e"
+				slug = titleLower.replace(/e|é|è|ẽ|ẻ|ẹ|ê|ế|ề|ễ|ể|ệ/gi, 'e');
+				// Letter "a"
+				slug = slug.replace(/a|á|à|ã|ả|ạ|ă|ắ|ằ|ẵ|ẳ|ặ|â|ấ|ầ|ẫ|ẩ|ậ/gi, 'a');
+				// Letter "o"
+				slug = slug.replace(/o|ó|ò|õ|ỏ|ọ|ô|ố|ồ|ỗ|ổ|ộ|ơ|ớ|ờ|ỡ|ở|ợ/gi, 'o');
+				// Letter "u"
+				slug = slug.replace(/u|ú|ù|ũ|ủ|ụ|ư|ứ|ừ|ữ|ử|ự/gi, 'u');
+				// Letter "d"
+				slug = slug.replace(/đ/gi, 'd');
+				// Trim the last whitespace
+				slug = slug.replace(/\s*$/g, '');
+				// Change whitespace to "-"
+				slug = slug.replace(/\s+/g, '-');
+				return slug;
+			}
 		},
 	}
 </script>
@@ -759,8 +797,9 @@
 		float: left;
 		width: 68px;
 		height: 68px;
-		background: url(/assets/img/title-icon-ps.svg) no-repeat;
+		background: no-repeat;
 		margin-right: 20px;
+		background-size: cover;
 	}
 	.title-text {
 		font-family: Helvetica, sans-serif;

@@ -10,9 +10,13 @@
           <div class="logo"><img src="/assets/img/logo-burst.png" alt="logo platz" height="38" width="90"></div>
         </router-link>
         <div id="main_tip_search">
+                  <router-link to='/'>
+
           <form>
             <input type="text" name="search" id="tip_search_input" @keyup="searchPosts" v-model='q' list="search" autocomplete=off required>
           </form>
+                  </router-link>
+
         </div>
         <div id="stripes"></div>
       </div>
@@ -38,9 +42,15 @@
     },
     methods: {
       searchPosts() {
-        if (this.q.length > 3) {
-          this.$store.dispatch('searchPost')
-        }
+        this.$store.commit('SET_INDEX', 0)
+        this.filteredPosts = []
+        console.log(this.$store.getters.getPostsDB);
+        this.$store.getters.getPostsDB.forEach(post => {
+          if (post.title.includes(this.q) || post.content.includes(this.q)) {
+            this.filteredPosts.push(post)
+          }
+        });
+        this.$store.commit('SET_POSTS', this.filteredPosts)
       }
     }
   }
