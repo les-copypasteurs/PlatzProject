@@ -86,6 +86,11 @@
         let result = string.slice(0, 150);
         return result;
       }
+    },
+    mounted() {
+      // console.log(this.$store.getters.getPostsDB);
+        this.$store.commit('SET_POSTS', this.$store.getters.getPostsDB)
+
     }
   }
 </script>

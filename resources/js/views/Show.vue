@@ -30,6 +30,8 @@
 							<div class="icon-download"><img src="/assets/img/icon-download.svg" alt="" width="19" height="26" /></div>
 							<div class="text-download"><a href="#"><b>Download</b></a></div>
 						</div>
+
+
 						<div class="wrapper-morefrom">
 							<div class="text-morefrom">More from .psd</div>
 							<div class="image-morefrom">
@@ -38,6 +40,8 @@
 								</a>
 							</div>
 						</div>
+
+
 					</div>
 					<div class="post-reply">
 						<div id="title-post-send">
@@ -45,7 +49,7 @@
 							<h2>Your comments</h2>
 						</div>
 					</div>
-					<div class="post-reply" v-for="(comment, i) in post.comment" v-bind:key="comment.id">
+					<div class="post-reply" v-for="(comment) in post.comment" v-bind:key="comment.id">
 						<div class="image-reply-post" v-bind:style="{ 'background-image': 'url(/assets/img/' + comment.user.avatar + ')' }"></div>
 						<div class="name-reply-post">{{comment.user.name}}</div>
 						<div class="text-reply-post">{{comment.content}}</div>
@@ -101,6 +105,7 @@
 					})
 					.then((response) => {
 						this.comment = ""
+						console.log(this.comment);
 						this.$store.dispatch('setPosts')
 					})
 					.catch(function(error) {
