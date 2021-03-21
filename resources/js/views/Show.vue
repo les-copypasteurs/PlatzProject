@@ -106,7 +106,7 @@
 					.then((response) => {
 						this.comment = ""
 						console.log(this.comment);
-						this.$store.dispatch('setPosts')
+						this.$store.dispatch('setPostsDB')
 					})
 					.catch(function(error) {
 						console.log(error);
