@@ -5,6 +5,7 @@ import axios from 'axios'
 const store = createStore({
     state:{
         name: "Vue",
+        postsDB: [],
         posts: [],
         filter:[1,2,3,4,5],
         limit: 20,
@@ -12,6 +13,9 @@ const store = createStore({
         q: ""
     },
     getters:{
+        getPostsDB(state){
+            return state.postsDB
+        },
         getPosts(state){
             return state.posts
         },
@@ -34,6 +38,9 @@ const store = createStore({
         }
     },
     mutations:{
+        SET_POSTSDB(state, data){
+            state.postsDB = data;
+        },
         SET_POSTS(state, data){
             state.posts = data;
         },
@@ -58,11 +65,12 @@ const store = createStore({
     },
 
     actions:{
-        setPosts({commit}){
+        setPostsDB({commit}){
             axios.get('/api/posts')
             .then((response) => {
-                commit('SET_POSTS',response.data)
-                console.log(response.data)
+                commit('SET_POSTSDB',response.data);
+                commit('SET_POSTS', this.state.postsDB)
+                console.log(this.state.postsDB)
 
             })
         },

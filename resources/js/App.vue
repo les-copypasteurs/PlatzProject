@@ -23,7 +23,7 @@ export default {
     Filter
   },
   created() {
-        this.$store.dispatch('setPosts');
+        this.$store.dispatch('setPostsDB');
         // this.$store.dispatch('setCategories');
     }
 }

@@ -6,7 +6,7 @@
         <div id="main-container-image">
           <section class="work">
             <div v-for="(post, i) in posts" v-bind:key="post.id">
-              <div v-if="filter.includes(post.categorie[0].id) && i < (index + limit) && i >= index">
+              <div v-if="i < (index + limit) && i >= index">
                 <figure class="white">
                   <router-link :to="{ name: 'show', params: { postId: post.id, slug: slugify(post.title) }}">
                     <img v-bind:src="'/assets/img/' + post.image" alt="" />
@@ -86,6 +86,11 @@
         let result = string.slice(0, 150);
         return result;
       }
+    },
+    mounted() {
+      // console.log(this.$store.getters.getPostsDB);
+        // this.$store.commit('SET_POSTS', this.$store.getters.getPostsDB)
+
     }
   }
 </script>
