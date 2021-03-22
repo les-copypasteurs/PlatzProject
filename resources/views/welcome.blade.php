@@ -14,6 +14,9 @@
         <router-view></router-view>
     </div>
     <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+    <script type="text/javascript">
+        window.csrf_token = "{{ csrf_token() }}"
+    </script>
 
 </body>
 

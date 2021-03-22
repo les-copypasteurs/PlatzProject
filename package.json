@@ -29,6 +29,7 @@
         "webpack-cli": "^4.5.0"
     },
     "dependencies": {
+        "moment": "^2.29.1",
         "vue-axios": "^3.2.4",
         "vue-router": "^4.0.4",
         "vuex": "^4.0.0"

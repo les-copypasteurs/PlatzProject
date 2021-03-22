@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
+use App\Models\Comment;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/posts', [PostController::class, 'index']);
-Route::get('/', [PostController::class, 'index']);
-Route::get('/articles', [ArticlesController::class, 'index']);
+Route::resource('posts', PostController::class);
+Route::resource('comments', CommentController::class);

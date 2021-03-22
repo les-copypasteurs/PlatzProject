@@ -1,11 +1,11 @@
 <template>
-<div>
-  <Header />
-  <Filter />
-  <Navbar />
-  <router-view/>
-  <Footer/>
-</div>
+  <div>
+    <Header />
+    <Filter />
+    <Navbar />
+    <router-view/>
+    <Footer/>
+  </div>
 </template>
 
 <script>
@@ -21,10 +21,14 @@ export default {
     Navbar,
     Header,
     Filter
-
-  }
+  },
+  created() {
+        this.$store.dispatch('setPostsDB');
+        // this.$store.dispatch('setCategories');
+    }
 }
 </script>
+
 
 <style>
 
